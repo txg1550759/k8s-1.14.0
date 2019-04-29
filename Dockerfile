@@ -29,7 +29,7 @@ RUN yum install -y passwd openssh openssh-clients openssh-server \
 #    && yum install redis -y
 
 RUN cd /home/ && wget https://dl.k8s.io/v1.14.0/kubernetes-server-linux-amd64.tar.gz
-ADD jdk-8u201-linux-x64.tar.gz /usr/local/
+#ADD jdk-8u201-linux-x64.tar.gz /usr/local/
 #ADD profile /etc/profile
 
 #RUN groupadd -g 1002 deploy \
@@ -37,15 +37,15 @@ ADD jdk-8u201-linux-x64.tar.gz /usr/local/
 #    && usermod -g deploy deploy \
 #    && mkdir -p /home/deploy/logs
 
-ADD docker-entrypoint.sh /tmp/
+#ADD docker-entrypoint.sh /tmp/
 
-ENV JAVA_HOME=/usr/local/jdk1.8.0_201 \
-    JRE_HOME=${JAVA_HOME}/jre \
-    CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib \
-    PATH=${JAVA_HOME}/bin:$PATH \
-    LANG="en_US.UTF-8" \
-    LANGUAGE="en_US:en" \
-    LC_ALL="en_US.UTF-8"
+#ENV JAVA_HOME=/usr/local/jdk1.8.0_201 \
+#    JRE_HOME=${JAVA_HOME}/jre \
+#    CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib \
+#    PATH=${JAVA_HOME}/bin:$PATH \
+ #   LANG="en_US.UTF-8" \
+#    LANGUAGE="en_US:en" \
+ #   LC_ALL="en_US.UTF-8"
 
 
 EXPOSE 22
