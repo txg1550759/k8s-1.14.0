@@ -28,7 +28,7 @@ RUN yum install -y passwd openssh openssh-clients openssh-server \
 #    && yum --enablerepo=remi install redis  expect.x86_64 -y \
 #    && yum install redis -y
 
-RUN cd /home/ && wget https://dl.k8s.io/v1.14.0/kubernetes-server-linux-amd64.tar.gz
+RUN cd /home/ && wget https://dl.k8s.io/v1.14.1/kubernetes-server-linux-amd64.tar.gz
 #ADD jdk-8u201-linux-x64.tar.gz /usr/local/
 #ADD profile /etc/profile
 
